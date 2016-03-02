@@ -13,6 +13,7 @@
 		58F4B9431C863F2500656977 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F4B9411C863F2500656977 /* MainMenu.xib */; };
 		58F4B94E1C863F2500656977 /* FullScreenStatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F4B94D1C863F2500656977 /* FullScreenStatsTests.m */; };
 		58F4B9591C863F2500656977 /* FullScreenStatsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F4B9581C863F2500656977 /* FullScreenStatsUITests.m */; };
+		58F4B9671C8641CE00656977 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F4B9661C8641CE00656977 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		58F4B9541C863F2500656977 /* FullScreenStatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullScreenStatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F4B9581C863F2500656977 /* FullScreenStatsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenStatsUITests.m; sourceTree = "<group>"; };
 		58F4B95A1C863F2500656977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58F4B9661C8641CE00656977 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F4B9671C8641CE00656977 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,7 @@
 		58F4B92D1C863F2500656977 = {
 			isa = PBXGroup;
 			children = (
+				58F4B9661C8641CE00656977 /* WebKit.framework */,
 				58F4B9381C863F2500656977 /* FullScreenStats */,
 				58F4B94C1C863F2500656977 /* FullScreenStatsTests */,
 				58F4B9571C863F2500656977 /* FullScreenStatsUITests */,
