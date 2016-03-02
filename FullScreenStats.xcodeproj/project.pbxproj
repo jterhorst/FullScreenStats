@@ -14,6 +14,7 @@
 		58F4B94E1C863F2500656977 /* FullScreenStatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F4B94D1C863F2500656977 /* FullScreenStatsTests.m */; };
 		58F4B9591C863F2500656977 /* FullScreenStatsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F4B9581C863F2500656977 /* FullScreenStatsUITests.m */; };
 		58F4B9671C8641CE00656977 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F4B9661C8641CE00656977 /* WebKit.framework */; };
+		58F4B9691C87213600656977 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58F4B9681C87213600656977 /* URL.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		58F4B9581C863F2500656977 /* FullScreenStatsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenStatsUITests.m; sourceTree = "<group>"; };
 		58F4B95A1C863F2500656977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58F4B9661C8641CE00656977 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		58F4B9681C87213600656977 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				58F4B93D1C863F2500656977 /* main.m */,
+				58F4B9681C87213600656977 /* URL.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				58F4B9401C863F2500656977 /* Assets.xcassets in Resources */,
 				58F4B9431C863F2500656977 /* MainMenu.xib in Resources */,
+				58F4B9691C87213600656977 /* URL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +491,7 @@
 				58F4B95F1C863F2500656977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58F4B9601C863F2500656977 /* Build configuration list for PBXNativeTarget "FullScreenStatsTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				58F4B9621C863F2500656977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58F4B9631C863F2500656977 /* Build configuration list for PBXNativeTarget "FullScreenStatsUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				58F4B9651C863F2500656977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

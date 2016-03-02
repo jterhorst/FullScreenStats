@@ -18,6 +18,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
+    NSString * urlString = @"https://dashingdemo.herokuapp.com/sample";
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[[NSBundle mainBundle] pathForResource:@"URL" ofType:@"plist"]]) {
+        urlString = [[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"URL" ofType:@"plist"]] valueForKey:@"URL"];
+    }
+    
     _window = [[NSWindow alloc] initWithContentRect:[[NSScreen screens] lastObject].frame styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO screen:[[NSScreen screens] lastObject]];
     [_window makeKeyAndOrderFront:nil];
     _window.backgroundColor = [NSColor blackColor];
@@ -26,8 +31,7 @@
     
     WebView * webview = [[WebView alloc] initWithFrame:_window.contentView.bounds];
     [_window.contentView addSubview:webview];
-    [[webview mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://google.com"]]];
-    
+    [[webview mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
