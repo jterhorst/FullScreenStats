@@ -10,8 +10,11 @@
 #import <WebKit/WebKit.h>
 
 @interface AppDelegate ()
-
-@property (nonatomic, strong) IBOutlet NSWindow *window;
+{
+    NSTimer * _refreshTimer; // reload the page hourly
+    WebView * _webview;
+}
+@property (nonatomic, strong) IBOutlet NSWindow * window;
 @end
 
 @implementation AppDelegate
@@ -29,9 +32,21 @@
     [_window setFrame:[[NSScreen screens] lastObject].frame display:YES];
     _window.level = NSStatusWindowLevel + 1;
     
-    WebView * webview = [[WebView alloc] initWithFrame:_window.contentView.bounds];
-    [_window.contentView addSubview:webview];
-    [[webview mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    _webview = [[WebView alloc] initWithFrame:_window.contentView.bounds];
+    [_window.contentView addSubview:_webview];
+    [[_webview mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    
+    _refreshTimer = [NSTimer scheduledTimerWithTimeInterval:300 target:self selector:@selector(_reloadPage) userInfo:nil repeats:YES];
+}
+
+- (IBAction)reloadPage:(id)sender;
+{
+    [self _reloadPage];
+}
+
+- (void)_reloadPage
+{
+    [_webview reload:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
